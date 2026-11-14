@@ -7,7 +7,7 @@ COPY frontend/src ./src
 COPY frontend/public ./public
 RUN npm run build
 
-FROM python:3.12-slim AS runtime
+FROM python:3.15-slim AS runtime
 ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 FRONTEND_DIST=/app/frontend/dist
 WORKDIR /app
 COPY requirements.txt ./
