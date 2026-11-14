@@ -1,4 +1,4 @@
-FROM node:24-bookworm-slim AS frontend
+FROM node:25-bookworm-slim AS frontend
 WORKDIR /build
 COPY frontend/package*.json ./
 RUN npm ci --ignore-scripts
